@@ -1,0 +1,29 @@
+extends layout
+
+block header
+  nav(class="navbar navbar-expand-lg navbar-light bg-light")
+    a(class="navbar-brand" href="/") joshua polzin
+
+    button(
+      class='navbar-toggler' 
+      type="button" 
+      data-toggle="collapse" 
+      data-target="#navbarNavCollapse"
+      aria-controls='navbarNavCollapse'
+      aria-expanded='false'
+      aria-label='Toggle navigation'
+    )
+      span(class='navbar-toggler-icon')
+
+
+    div(class="collapse navbar-collapse" id="navbarNavCollapse")
+      ul(class=["nav", "navbar-nav", "list-unstyled"])
+        each val in ["about", "projects", "experience", "contact"]
+          - link = "/" + val + "/"
+          - let classes = "nav-item"
+          - if (val === page)
+            - classes += " active"
+            - link = "#"
+
+          li(class= classes) 
+            a(class="nav-link" href=link) #{val}
