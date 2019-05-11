@@ -1,23 +1,26 @@
 extends header
 
 block content
-  div.container.border.mt-4
+  div.container.border.bg-gray.mt-3
     // main strip
     div.row.pt-4.center
       // intro section
-      div.col-sm-1
-      div.col-sm-5
-        div.facts
-          div.float-lg-left.w-100
-            img(src="/images/josh.jpg" class="img-fluid")
+      div.col-sm-6.border-right
+        div.float-lg-left.w-100.mb-3
+          img(src=img_portrait class="img-fluid")
 
-      div.col-sm-5.border-left
-        div.pl-4
-            h2(class='text-left') Quick facts
-              // any information, sent by server
-    div.row
-      div.pt-4.pl-4.pr-4
-        p josh
+      div.col-sm-6
+        div.pl-0.ml-0
+          h2(class='text-left').pb-2.pt-2 Quick facts
+          ul.list-unstyled
+            each fact in facts
+              p.row
+                span.font-weight-bold.col-lg-3= fact.name 
+                span.col-lg-9.mb-0 #{fact.content}
+
+    div.row.border-top
+      div.pt-3.pl-4.pr-4
+        p= personal_statement
 
       
   
