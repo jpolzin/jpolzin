@@ -1,27 +1,27 @@
 extends header
 
 block content
-  div.container.border.bg-gray.mt-3
-    // main strip
-    div.row.pt-4.center
-      // intro section
-      div.col-sm-6.border-right
-        div.float-lg-left.w-100.mb-3
-          img(src=img_portrait class="img-fluid")
+  .main-body
+    .home-intro
+      img(src=img_portrait, class="img-portrait")
+      h3(class="text-center") Joshua Polzin
+      p(class="text-left") Description
 
-      div.col-sm-6
-        div.pl-0.ml-0
-          h2(class='text-left').pb-2.pt-2 Quick facts
-          ul.list-unstyled
-            each fact in facts
-              p.row
-                span.font-weight-bold.col-lg-3= fact.name 
-                span.col-lg-9.mb-0 #{fact.content}
+    .home-projects
+      .project-container
+        each proj in projects
+          +project(proj)
 
-    div.row.border-top
-      div.pt-3.pl-4.pr-4
-        p= personal_statement
+    .home-education
+      .education-summary
+        img.logo(src="/images/umlogo.png")
+        p.education-summary-text #{education_summary}
+      .education-coursework-container
+        each course in coursework
+          .education-coursework-entry
+            p.entry-left #{course.name}
+            p.entry-right #{course.desc}
 
-      
+    .home-
   
 

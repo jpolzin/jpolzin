@@ -1,3 +1,12 @@
+body {
+  min-width: 300px;
+}
+
+div {
+  border: 1px;
+  border-color: black;
+}
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -6,21 +15,6 @@
   float: right;
 }
 
-.bg-red {
-  background-color: red;
-}
-
-.bg-blue {
-  background-color: blue;
-}
-
-.bg-gray {
-  background-color: #FBFBFB;
-}
-
-.bg-white {
-  background-color: white;
-}
 
 .project-tag {
   text-align: center;
@@ -28,8 +22,109 @@
   color: white;
 }
 
-/* Change font size iPhone 5 */
-@media (max-width: 370px) {  
-  h3 {font-size: 16pt;}
-  p {font-size: 10pt;} /*1rem = 16px*/
+.main-body {
+  display: flex;
+  flex-flow: column;
+  margin-left: 30px;
+  margin-right: 30px;
 }
+
+.home-intro {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex: none;
+  padding: 20px;
+}
+
+.img-portrait {
+  align-self: center;
+  width: 100%;
+  border-radius: 50%;
+  max-width: 555px;
+  max-height: 555px;
+}
+
+.project-container {
+  display: flex;
+  flex-flow: wrap;
+  width: 60%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.project-block {
+  min-width: 300px;
+  margin: 20px;
+  flex: 1;
+}
+
+.project-title {
+  display: block;
+}
+
+.home-education {
+  display: block;
+  margin-top: 100px;
+}
+
+.education-summary {
+  display: flex;
+  flex-flow: row;
+  /*flex-wrap: wrap;*/
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.education-summary-text {
+  display: inline;
+
+}
+
+.logo {
+  display: inline;
+  width: 150px;
+  height: 150px;
+  margin-right: 10%;
+}
+
+.education-coursework-container {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.education-coursework-entry {
+  width: 100%;
+}
+
+.entry-left {
+  width: 20%;
+  display: inline-block;
+  float: left;
+}
+
+.entry-right {
+  width: 80%;
+  display: inline-block;
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
