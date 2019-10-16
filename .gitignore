@@ -68,7 +68,6 @@ node_modules/
 doc.txt
 server.cert
 server.key
-public/images/
 .ebextensions/
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
@@ -76,3 +75,4 @@ public/images/
 !.elasticbeanstalk/*.global.yml
 
 .idea/
+ssh-aws
