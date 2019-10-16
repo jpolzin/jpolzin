@@ -1,27 +1,64 @@
 extends header
 
 block content
-  .main-body
-    .home-intro
-      img(src=img_portrait, class="img-portrait")
-      h3(class="text-center") Joshua Polzin
-      p(class="text-left") Description
+  .home-landing.view-height
+    .landing-photo.object-fit
+      img(src="/images/trees.jpg").object-fit.view-height
+      .darken-mask.view-height
+    .landing-title
+      h1.landing-text Josh Polzin
+      hr.landing-break
+      h3 Developer | Leader | Mediator | Problem-Solver
 
-    .home-projects
+  .main-body
+    .home-intro.home-section
+      img(src=imgPortrait).landing-img-portrait
+      +subheading("Introduction")
+      .intro-container
+        p.text-left #{introText}
+
+    .home-projects.home-section
+      +subheading("Projects")
       .project-container
         each proj in projects
           +project(proj)
 
-    .home-education
+    .home-education.home-section
+      +anchor("education")
+      +subheading("Education")
       .education-summary
         img.logo(src="/images/umlogo.png")
         p.education-summary-text #{education_summary}
       .education-coursework-container
         each course in coursework
           .education-coursework-entry
-            p.entry-left #{course.name}
-            p.entry-right #{course.desc}
+            p.float-left.col-2 #{course.name}
+            p.float-right.col-10 #{course.desc}
 
-    .home-
-  
+    .home-skills.home-section
+      +anchor("skills")
+      +subheading("Skills")
+      .skills-container
+        each skill in skills
+          .single-skill-container
+            p.float-left.col-2 #{skill.name}
+            +starRating(skill.rating, 5)
+
+
+    .home-experience.home-section
+      +anchor("experience")
+      +subheading("Work Experience")
+      .project-container
+        each work in experience
+          +experience(work)
+
+    a.anchor(id="contact")
+    .home-contact.home-section
+      .contact-container
+        +subheading("Contact Me")
+        h3
+          a(href="mailto:jpolzin@umich.edu") jpolzin@umich.edu
+
+
+
 

@@ -1,10 +1,20 @@
 {
   "about": {
-
+    "introText": "text"
   },
   "projects": [
     {
-      "projectTitle": "Junkyard Brawl",
+      "title": "Junkyard Brawl",
+      "company": "EECS 494",
+      "dateString": "Winter 2019",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus iaculis dignissim. Pellentesque metus erat, cursus a dolor in, lobortis fringilla urna. Suspendisse hendrerit metus congue ex accumsan, id tincidunt tortor lacinia. Duis vulputate blandit eros quis lacinia. Aliquam aliquet diam vel iaculis fermentum.",
+      "tags": [
+        "C#",
+        "Unity"
+      ]
+    },
+    {
+      "title": "Junkyard Brawl",
       "company": "EECS 494",
       "dateString": "Winter 2019",
       "body": "body text",
@@ -14,7 +24,7 @@
       ]
     },
     {
-      "projectTitle": "Junkyard Brawl",
+      "title": "Junkyard Brawl",
       "company": "EECS 494",
       "dateString": "Winter 2019",
       "body": "body text",
@@ -24,7 +34,7 @@
       ]
     },
     {
-      "projectTitle": "Junkyard Brawl",
+      "title": "Junkyard Brawl",
       "company": "EECS 494",
       "dateString": "Winter 2019",
       "body": "body text",
@@ -34,7 +44,7 @@
       ]
     },
     {
-      "projectTitle": "Junkyard Brawl",
+      "title": "Junkyard Brawl",
       "company": "EECS 494",
       "dateString": "Winter 2019",
       "body": "body text",
@@ -44,17 +54,7 @@
       ]
     },
     {
-      "projectTitle": "Junkyard Brawl",
-      "company": "EECS 494",
-      "dateString": "Winter 2019",
-      "body": "body text",
-      "tags": [
-        "C#",
-        "Unity"
-      ]
-    },
-    {
-      "projectTitle": "Junkyard Brawl",
+      "title": "Junkyard Brawl",
       "company": "EECS 494",
       "dateString": "Winter 2019",
       "body": "body text",
@@ -81,9 +81,34 @@
     ]
   },
   "experience": [
+    {
+      "company": "Capital One",
+      "title": "Software Engineering Intern",
+      "dateString": "Summer 2019",
+      "body": "stuff",
+      "tags": [
 
+      ]
+    },
+    {
+      "company": "Capital One",
+      "title": "Software Engineering Intern",
+      "dateString": "Summer 2019",
+      "body": "stuff",
+      "tags": [
+
+      ]
+    }
   ],
   "skills": [
+    {
+      "name": "C++",
+      "rating": 5
+    },
+    {
+      "name": "Kotlin",
+      "rating": 4
+    }
 
   ],
   "filler": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus iaculis dignissim. Pellentesque metus erat, cursus a dolor in, lobortis fringilla urna. Suspendisse hendrerit metus congue ex accumsan, id tincidunt tortor lacinia. Duis vulputate blandit eros quis lacinia. Aliquam aliquet diam vel iaculis fermentum."

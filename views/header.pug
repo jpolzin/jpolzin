@@ -2,7 +2,7 @@ extends layout
 
 
 block header
-  nav(class="navbar navbar-expand-lg navbar-light bg-ligh border-bottom bg-gray")
+  nav(class="navbar navbar-expand-lg navbar-light bg-ligh border-bottom bg-gray sticky")
     a(class="navbar-brand" href="/") joshua polzin
 
     button(
@@ -19,12 +19,14 @@ block header
 
     div(class="collapse navbar-collapse" id="navbarNavCollapse")
       ul(class="nav navbar-nav list-unstyled")
-        each val in ["about", "projects", "experience", "contact"]
-          - link = "/" + val + "/"
+        each val in ["projects", "experience", "education", "skills", "contact"]
+          if val === "projects"
+            - link = "/projects/"
+          else
+            - link = "/#" + val
           - let classes = "nav-item"
           - if (val === page)
             - classes += " active"
-            - link = "#"
 
           li(class= classes) 
             a(class="nav-link" href=link) #{val}
@@ -32,8 +34,54 @@ block header
 mixin project(proj)
   .project-block
     .project-title
-      h2 #{proj.projectTitle} title
-      p.text-right #{proj.company} | #{proj.dateString}
+      h3.text-inline #{proj.title}
+      p.project-title-text.text-inline #{proj.company} | #{proj.dateString}
     .project-divider
     .project-body
-      p body text
+      p #{proj.body}
+    each tag in proj.tags
+      +projectTag(proj.tag)
+
+mixin starRating(rating, total)
+  - rating -= 1
+  .star-block
+    - let n = 0;
+    while n < total
+      - console.log('help');
+      if n <= rating
+        p &#x2605
+      else
+        p &#x2606
+      - n += 1;
+
+mixin experience(proj)
+  .project-block
+    .project-title
+      h3 #{proj.company}
+      p.text-right #{proj.title} | #{proj.dateString}
+    .project-divider
+    .project-body
+      p #{proj.body}
+
+
+
+mixin subheading(text)
+  .subheading-container
+    h2.subheading-text #{text}
+    .subheading-divider
+
+mixin anchor(id)
+  .anchor
+    a(id=id)
+
+mixin projectTag(tag)
+  - var color = "gray"
+  - var textColor = ""
+  if tag === "C#"
+    - color = "black"
+    - textColor = "light"
+  else if tag === "C++"
+    - color = "yellow"
+    - textColor = "dark"
+  div.project-tag(class=color)
+    p #{tag}

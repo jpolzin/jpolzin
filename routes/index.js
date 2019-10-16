@@ -5,22 +5,24 @@ var router = express.Router();
 var data = JSON.parse(fs.readFileSync('./public/data/data.json'));
 
 /* GET about page. */
-function about(req, res, next)
+function index(req, res, next)
 {
-  console.log(data.education.coursework)
   res.render('index', {
     title: 'joshua polzin | home',
     page: 'home',
-    img_portrait: '/images/josh.jpg',
+    imgPortrait: '/images/josh.jpg',
+    introText: data.about.introText,
     projects: data.projects.slice(0, 4),
     education_summary: data.filler,
-    coursework: data.education.coursework
+    coursework: data.education.coursework,
+    skills: data.skills,
+    experience: data.experience
   });
+  console.log("homepage rendered")
+
 }
-router.get('/', function(req, res, next) {
-  res.redirect('/about/')
-});
-router.get('/about/', about);
+
+router.get('/', index);
 
 
 /* GET projects page */
@@ -65,32 +67,6 @@ router.get('/projects/', function(req, res, next) {
   })
 })
 
-
-/* GET experience page */
-router.get('/experience/', function(req, res, next) {
-  res.render('experience', {
-    title: 'joshua polzin | experience',
-    page: 'experience',
-    experiences: [
-      {
-        name: 'Software Engineering Intern',
-        date: 'May 2018 - August 2018',
-        category: 'Protolabs, Inc.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus iaculis dignissim. ' +
-          'Pellentesque metus erat, cursus a dolor in, lobortis fringilla urna. Suspendisse hendrerit metus congue ex ' +
-          'accumsan, id tincidunt tortor lacinia. Duis vulputate blandit eros quis lacinia. Aliquam aliquet diam vel iaculis fermentum.'
-      }
-    ]
-  })
-})
-
-
-router.get('/contact/', function(req, res, next) {
-  res.render('contact', {
-    title: 'joshua polzin | contact',
-    page: 'contact'
-  })
-})
 
 
 
