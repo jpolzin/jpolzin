@@ -75,4 +75,5 @@ server.key
 !.elasticbeanstalk/*.global.yml
 
 .idea/
-ssh-aws
+app.yaml
+.gcloudignore
