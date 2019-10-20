@@ -32,8 +32,10 @@ block content
       .education-coursework-container
         each course in coursework
           .education-coursework-entry
-            p.float-left.col-2 #{course.name}
-            p.float-right.col-10 #{course.desc}
+            .col-6.float-left
+              p.float-right #{course.name}
+            .col-6.float-right
+              p.float-left #{course.desc}
 
     .home-skills.home-section
       +anchor("skills")
@@ -41,7 +43,7 @@ block content
       .skills-container
         each skill in skills
           .single-skill-container
-            p.float-left.col-2 #{skill.name}
+            p.float-left #{skill.name}
             +starRating(skill.rating, 5)
 
 

@@ -1,3 +1,5 @@
+@import "nord.css";
+
 html {
   height: 100%;
 }
@@ -9,14 +11,20 @@ body {
   background-position: center;
   height: 50%;
 }
-div {
-  border-width: 1px;
-  border-style: dashed;
-  border-color: black;
-}
+/*div {*/
+/*  border-width: 1px;*/
+/*  border-style: dashed;*/
+/*  border-color: black;*/
+/*}*/
 h2 {
   font-size: 250%;
   margin-bottom: 1em;
+}
+h3 {
+  margin-bottom: 0px;
+}
+p {
+  margin-bottom: 0px;
 }
 
 .anchor {
@@ -26,6 +34,13 @@ h2 {
   position: absolute;
   top: -6vh;
   left: 0;
+}
+
+.inline {
+  display: flex;
+  flex-flow: row;
+  vertical-align: center;
+  align-items: center;
 }
 
 .home-section {
@@ -38,7 +53,7 @@ h2 {
   position: fixed;
   width: 100%;
   opacity: 100%;
-  background-color: lightgray;
+  background-color: var(--nord5);
   z-index: 10;
   height: 6vh
 }
@@ -117,17 +132,16 @@ h2 {
 
 .subheading-divider {
   height: 0px;
-  border: 1px white;
+  border: 1px;
   width: 80%;
   margin: 0 auto;
-  color: white;
   display: block;
   position: relative;
   padding: 0;
   max-height: 0;
   font-size: 1px;
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
 }
 
 .home-landing {
@@ -175,7 +189,7 @@ h2 {
   flex-direction: column;
   flex-wrap: nowrap;
   flex: none;
-  background-color: green;
+  background-color: var(--nord6);
 }
 
 .landing-img-portrait {
@@ -198,11 +212,11 @@ h2 {
 }
 
 .home-projects {
-  background-color: gray;
+  background-color: var(--nord1);
+  color: var(--nord6);
 }
 
 .project-container {
-  display: flex;
   flex-flow: wrap;
   width: 90vw;
   max-width: 1000px;
@@ -210,17 +224,24 @@ h2 {
   align-items: baseline;
 }
 
-
 .project-block {
   min-width: 400px;
   margin: 20px;
   flex: 1;
-  background-color: white;
+  align-items: center;
+  color: var(--nord0);
+  background-color: var(--nord4);
   padding: .5em;
 }
 
 .project-body {
   width: fit-content;
+}
+
+.companyLogo {
+  width: 200px;
+  flex-direction: row;
+  padding: 10px;
 }
 
 .project-title {
@@ -239,11 +260,38 @@ h2 {
   margin-bottom: auto;
 }
 
-.black {
-  background-color: black;
+.experience-title {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  padding-bottom: 5px;
 }
-.yellow {
-  background-color: yellow;
+
+.experience-title-company {
+  line-height: 40px;
+}
+
+.experience-title-text {
+  flex: 1;
+  text-align: right;
+  font-style: italic;
+  margin-right: 10px;
+  line-height: 40px;
+}
+
+.project-divider {
+  height: 0px;
+  border: 1px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: block;
+  position: relative;
+  padding: 0;
+  max-height: 0;
+  font-size: 1px;
+  border-top: 1px solid;
 }
 
 .light {
@@ -256,7 +304,7 @@ h2 {
 
 .home-education {
   display: block;
-  background-color: red;
+  background-color: var(--nord4);
 }
 
 .education-summary {
@@ -272,14 +320,14 @@ h2 {
 
 .education-summary-text {
   display: inline;
-
+  margin-left: 50px;
 }
 
 .logo {
   display: inline;
   width: 150px;
   height: 150px;
-  margin-right: 10%;
+  /*margin-right: 10%;*/
 }
 
 .education-coursework-container {
@@ -288,21 +336,29 @@ h2 {
   width: 50%;
   margin: auto;
   margin-top: 30px;
+  background-color: var(--nord6);
 }
 
 .education-coursework-entry {
   width: 100%;
 }
 
+.home-skills {
+  background-color: var(--nord0);
+  color: var(--nord6)
+}
+
 .skills-container {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
+  align-content: center;
   width: 60%;
   margin: 0 auto;
   margin-top: 30px;
   align-items: center;
   max-width: 800px;
+  background-color: var(--nord10);
 }
 
 .star-block {
@@ -315,12 +371,15 @@ h2 {
 
 .single-skill-container {
   min-width: 300px;
-  margin: 10px;
+  padding: 15px  20px;
   flex: 1;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .home-experience {
-  background-color: wheat;
+  background-color: var(--nord6);
 }
 
 .home-contact {

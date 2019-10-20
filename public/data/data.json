@@ -7,60 +7,50 @@
       "title": "Junkyard Brawl",
       "company": "EECS 494",
       "dateString": "Winter 2019",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus iaculis dignissim. Pellentesque metus erat, cursus a dolor in, lobortis fringilla urna. Suspendisse hendrerit metus congue ex accumsan, id tincidunt tortor lacinia. Duis vulputate blandit eros quis lacinia. Aliquam aliquet diam vel iaculis fermentum.",
+      "body": "Designed and developed a two-player 2D fighting game over ten weeks on a team of four using the Unity game engine.",
       "tags": [
         "C#",
         "Unity"
       ]
     },
     {
-      "title": "Junkyard Brawl",
-      "company": "EECS 494",
-      "dateString": "Winter 2019",
-      "body": "body text",
+      "title": "Thread Library",
+      "company": "EECS 482",
+      "dateString": "Winter 2018",
+      "body": "Implemented a functional multithreading library on a three-person team using low-level C/C++.",
       "tags": [
-        "C#",
-        "Unity"
+        "C++",
+        "Concurrency"
       ]
     },
     {
-      "title": "Junkyard Brawl",
-      "company": "EECS 494",
-      "dateString": "Winter 2019",
-      "body": "body text",
+      "title": "Client-Side Instagram Clone",
+      "company": "EECS 485",
+      "dateString": "Fall 2018",
+      "body": "Created an Instagram clone with client-side rendering and a REST API using React, Flask, and a SQLite database",
       "tags": [
-        "C#",
-        "Unity"
+        "Python",
+        "Javascript",
+        "HTML",
+        "CSS"
       ]
     },
     {
-      "title": "Junkyard Brawl",
-      "company": "EECS 494",
-      "dateString": "Winter 2019",
-      "body": "body text",
+      "title": "Software Synthesizer & Transcriber",
+      "company": "ENGR 100",
+      "dateString": "Fall 2016",
+      "body": "Built a GUI software synthesizer that allowed the user to design their own sounds through additive synthesis.",
       "tags": [
-        "C#",
-        "Unity"
+        "MATLAB"
       ]
     },
     {
-      "title": "Junkyard Brawl",
-      "company": "EECS 494",
-      "dateString": "Winter 2019",
-      "body": "body text",
+      "title": "FM Synthesizer Plugin",
+      "company": "Personal Project",
+      "dateString": "Ongoing",
+      "body": "Currently designing & developing an FM synthesizer DAW plugin using the JUCE C++ audio framework.",
       "tags": [
-        "C#",
-        "Unity"
-      ]
-    },
-    {
-      "title": "Junkyard Brawl",
-      "company": "EECS 494",
-      "dateString": "Winter 2019",
-      "body": "body text",
-      "tags": [
-        "C#",
-        "Unity"
+        "C++"
       ]
     }
   ],
@@ -68,15 +58,20 @@
     "coursework": [
       {
         "name": "EECS 494",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus iaculis dignissim. Pellentesque metus erat, cursus a dolor in, lobortis fringilla urna. Suspendisse hendrerit metus congue ex accumsan, id tincidunt tortor lacinia. Duis vulputate blandit eros quis lacinia. Aliquam aliquet diam vel iaculis fermentum."
+        "desc": "Video Game Development",
+        "tags": [
+          "C#",
+          "Unity"
+        ]
       },
       {
-        "name": "EECS 494",
-        "desc": "Video game dev"
-      },
-      {
-        "name": "EECS 494",
-        "desc": "Video game dev"
+        "name": "EECS 485",
+        "desc": "Web Development",
+        "tags": [
+          "Python",
+          "JavaScript",
+          "Flask"
+        ]
       }
     ]
   },
@@ -85,18 +80,22 @@
       "company": "Capital One",
       "title": "Software Engineering Intern",
       "dateString": "Summer 2019",
-      "body": "stuff",
+      "body": "Researched and developed technologies to automate Android accessibility testing for the flagship Capital One app, potentially saving up to 120 developer hours every sprint once integrated.\n• Facilitated a small team of interns to build an internal app and website using the cross-platform Flutter framework.",
+      "imgLogo": "images/c1.png",
       "tags": [
-
+        "Android",
+        "Kotlin",
+        "Flutter"
       ]
     },
     {
-      "company": "Capital One",
+      "company": "Protolabs",
       "title": "Software Engineering Intern",
-      "dateString": "Summer 2019",
-      "body": "stuff",
+      "dateString": "Summer 2018",
+      "body": "Designed a prototype mill communication application to pull data from production CNC mills using TCP sockets, providing a vital proof-of-concept to developers to guide communication projects going forward.\nDeveloped production C++ code in an agile environment to improve user throughput and experience.",
+      "imgLogo": "images/protolabs.png",
       "tags": [
-
+        "C++"
       ]
     }
   ],
@@ -108,8 +107,31 @@
     {
       "name": "Kotlin",
       "rating": 4
+    },
+    {
+      "name": "Python",
+      "rating": 4
+    },
+    {
+      "name": "JavaScript",
+      "rating": 1
+    },
+    {
+      "name": "C#",
+      "rating": 3
+    },
+    {
+      "name": "Java",
+      "rating": 3
+    },
+    {
+      "name": "Unity",
+      "rating": 3
+    },
+    {
+      "name": "React",
+      "rating": 1
     }
-
   ],
   "filler": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus iaculis dignissim. Pellentesque metus erat, cursus a dolor in, lobortis fringilla urna. Suspendisse hendrerit metus congue ex accumsan, id tincidunt tortor lacinia. Duis vulputate blandit eros quis lacinia. Aliquam aliquet diam vel iaculis fermentum."
 }

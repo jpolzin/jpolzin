@@ -47,7 +47,6 @@ mixin starRating(rating, total)
   .star-block
     - let n = 0;
     while n < total
-      - console.log('help');
       if n <= rating
         p &#x2605
       else
@@ -56,12 +55,16 @@ mixin starRating(rating, total)
 
 mixin experience(proj)
   .project-block
-    .project-title
-      h3 #{proj.company}
-      p.text-right #{proj.title} | #{proj.dateString}
+    - console.log(proj.imgLogo)
+    .experience-title
+      h3.experience-title-company #{proj.company}
+      p.experience-title-text #{proj.title} | #{proj.dateString}
+
     .project-divider
-    .project-body
-      p #{proj.body}
+    .inline
+      img(src=proj.imgLogo).companyLogo
+      .project-body
+        p #{proj.body}
 
 
 
